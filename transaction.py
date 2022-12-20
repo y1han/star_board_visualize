@@ -2,7 +2,7 @@ from typing import List
 from datetime import time
 from utils import read_data_flow
 
-OPEN_TIME = time(9, 15, 0)
+OPEN_TIME = time(9, 30, 0)
 CLOSE_TIME = time(15, 0, 0)
 
 

@@ -10,5 +10,6 @@ if __name__ == "__main__":
 
     p = Price(688017, "/Users/y1han/databases/STAR Board/")
     p.order_quantity("2022-07-04").plot()
+    p.price_series("2022-07-04").plot(secondary_y=True, alpha=0.5, color="grey")
     # p.avg_order_quantity.plot()
     plt.show()
