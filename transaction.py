@@ -13,6 +13,7 @@ class Transaction:
     def day_cum_trade_quantity(self, date: str = "2022-07-04"):
         return self.transaction_flow["TradeQty"][self.transaction_flow.index.date.astype(str) == date].cumsum()
 
+    @property
     def avg_cum_trade_quantity(self):
         resample = self.transaction_flow["TradeQty"].resample("3s").sum().between_time(OPEN_TIME, CLOSE_TIME)
         return resample.groupby([resample.index.time]).mean().cumsum()
