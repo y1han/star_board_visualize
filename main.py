@@ -1,12 +1,16 @@
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 from transaction import Transaction
 from price import Price
+
+sns.set_style("darkgrid")
 
 if __name__ == "__main__":
     t = Transaction(688363, "/Users/y1han/databases/STAR Board/")
     # t.avg_cum_trade_quantity.plot()
     t.intraday_price_series().plot()
+    # t.ma().plot()
 
     # p = Price(688017, "/Users/y1han/databases/STAR Board/")
     # p.order_quantity("2022-07-04").plot()
